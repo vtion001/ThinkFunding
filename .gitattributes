@@ -1,0 +1,27 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# C# files
+*.cs text diff=csharp
+
+# JavaScript/TypeScript
+*.js text
+*.ts text
+*.tsx text
+*.json text
+*.css text
+*.html text
+
+# Markdown
+*.md text
+
+# SQL
+*.sql text
+
+# Shell
+*.sh text eol=lf
+
+# Enforce LF for cross-platform compatibility
+*.cs text eol=lf
+*.csproj text eol=lf
+*.sln text eol=lf

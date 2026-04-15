@@ -1,0 +1,490 @@
+
+
+=== PAGE 1 ===
+
+COMBINED SOFTWARE DEVELOPMENT AGREEMENT
+AND
+STATEMENT OF WORK
+Phase 1A MVP Development for Think Funding LLC
+Effective Date April 13, 2026
+Think Funding LLC, represented by Aia Labja
+Client Email: aia.labja@thinkfundinggroup.com
+Location: Rhode Island, USA
+Vincent John Rodriguez
+Developer Email: vjrodriguez1994@gmail.com
+Location: Philippines
+Website https://thinkfundinggroup.com
+This Combined Software Development Agreement and Statement of Work (this "Agreement") is entered into
+as of the Effective Date stated above by and between Think Funding LLC ("Client" or "Think Funding") and
+Vincent John Rodriguez ("Developer"). Client and Developer may be referred to individually as a "Party"
+and collectively as the "Parties." This Agreement sets forth the terms under which Developer will design,
+build, document, and deliver the Phase 1A minimum viable product ("Phase 1A MVP") described in Exhibit
+A.
+1. Engagement and Scope
+1.1 Client engages Developer, and Developer accepts such engagement, to perform the Services and deliver
+the Deliverables for the Phase 1A MVP in accordance with this Agreement and Exhibit A.
+1.2 The Services are limited to the in-scope items expressly identified in Exhibit A. Any work outside
+Exhibit A, including any item identified as future-phase, advanced, optional, or not expressly included, is out
+of scope unless added through a written Change Order signed by both Parties under Section 6.
+1.3 This Agreement is intended to cover only Phase 1A MVP work. High-level descriptions of later phases
+are included solely to clarify exclusions and prevent scope creep.
+2. Term
+2.1 This Agreement begins on the Effective Date and continues until final acceptance of the Deliverables or
+earlier termination in accordance with Section 17.
+2.2 The milestone target dates are set forth in Exhibit B and may be completed after such dates if revised in
+writing by the Parties.
+3. Definitions
+3.1 "Services" means the development, configuration, implementation, documentation, handoff, and related
+work to be performed by Developer under this Agreement.
+3.2 "Deliverables" means all work product, code, configurations, workflows, scripts, databases,
+documentation, diagrams, specifications, materials, and other items created, configured, or delivered by
+Developer for Client under this Agreement, in both source and compiled/object forms, whether complete or
+incomplete.
+3.3 "Technical Documentation" means the detailed technical documentation required under Section 10 and
+Exhibit A, including architecture notes, deployment notes, workflow explanations,
+
+=== PAGE 2 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+environment/configuration notes, database/schema notes, troubleshooting notes, and operational guidance
+sufficient for future maintenance and troubleshooting.
+3.4 "Acceptance" means Client’s written confirmation that the applicable milestone deliverable or final
+Deliverables satisfy the applicable acceptance criteria in Exhibit A and Exhibit B.
+3.5 "Change Order" means a written amendment signed by both Parties that modifies scope, fees, timing, or
+Deliverables.
+3.6 “Contract Price” means the total fixed fee of Three Thousand United States Dollars (US$3,000.00).
+For payment purposes, the Contract Price shall be converted into Philippine Pesos (“PHP”) using the
+Conversion Rate set forth in Section 5.2, and all payments due under this Agreement shall be made in PHP
+based on that Conversion Rate. The resulting total Contract Price in PHP shall remain fixed for all Milestone
+Payments under this Agreement.
+4. Order of Precedence
+4.1 In the event of a conflict, the following order of precedence applies:
+(a) the main body of this Agreement;
+(b) Exhibit A (Statement of Work / Phase 1A Scope);
+(c) Exhibit B (Milestones and Payment Schedule); and
+(d) Exhibit C (Out-of-Scope and Future Phases).
+4.2 No email, message, verbal request, or informal instruction modifies this Agreement unless expressly
+incorporated into a signed Change Order.
+5. Fees and Payment
+5.1 The total fixed fee for all Services and Deliverables under this Agreement is Three Thousand U.S.
+Dollars (US$3,000.00) (the “Contract Price”), payable in Philippine Pesos (“PHP”) based on the Conversion
+Rate (as defined in Section 5.2).
+5.2 Conversion Rate. For payment purposes, the Contract Price shall be converted into Philippine Pesos
+(“PHP”) using the following USD-to-PHP exchange rate: 1 USD = 60.19 PHP (the “Conversion Rate”),
+according to Wise.com on April 13, 2026 at 11:00 AM EST (the “Conversion Rate Date”). Based on the
+Conversion Rate, the total Contract Price in PHP is: PHP 180,570.00 (the “PHP Contract Price”). The PHP
+Contract Price shall remain fixed for all Milestone Payments under this Agreement.
+5.3 The PHP Contract Price shall be paid only upon completion and Acceptance of the applicable milestone
+described in Exhibit B, in the following proportions (each, a “Milestone Payment”), in each case payable in
+PHP based on the Conversion Rate:
+(a) Milestone 1: twenty percent (20%) / PHP 36,114.00;
+(b) Milestone 2: thirty percent (30%) / PHP 54,171.00; and
+(c) Milestone 3: fifty percent (50%) / PHP 90,285.00.
+5.4 Developer shall issue an invoice only after completion of the applicable milestone and Client’s
+Acceptance of that milestone. Client shall pay each approved invoice within five (5) business days after
+receipt unless the Parties insert a different period in Exhibit B.
+5.5 Except as expressly stated in a signed Change Order, the Contract Price includes all labor, ordinary tools,
+and ordinary development effort required to complete the in-scope Services. Third-party service fees, cloud
+charges, domain fees, SaaS subscriptions, licenses, SMS/email usage fees, or other pass-through costs are
+excluded unless expressly stated otherwise in Exhibit A.
+5.6 Developer shall not be entitled to additional fees for work caused by Developer’s errors, rework required
+to meet the agreed scope, or work necessary to achieve Acceptance for in-scope Deliverables.
+5.7 Payment Method. All payments under this Agreement shall be made via Wise to an account designated in
+writing by Developer. Client (Think Funding) shall be responsible for any Wise processing or transfer fees,
+Think Funding LLC Phase 1A MVP – Page 2
+
+=== PAGE 3 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+and Client shall pay such fees in addition to the applicable Milestone Payment so that Developer receives the
+full net Milestone Payment amount in PHP.
+6. Change Control
+6.1 Any proposed change to the Services, Deliverables, timeline, architecture, functionality, integrations,
+documentation requirements, or fees must be documented in a Change Order.
+6.2 A Change Order must describe, at minimum, the requested change, any impact on fees, any impact on
+delivery dates, and any revised acceptance criteria.
+6.3 Developer is not obligated to perform changed or additional work until the applicable Change Order is
+signed by both Parties.
+7. Milestones and Delivery
+7.1 The milestone framework, milestone descriptions, milestone target dates, and related payment amounts
+are set forth in Exhibit B. Blank lines are intentionally included so the Parties may complete the milestone
+details and target dates before execution.
+7.2 Developer shall use commercially reasonable efforts to achieve each milestone by the applicable target
+date entered in Exhibit B.
+7.3 Delivery shall be deemed made only when Developer provides Client with the applicable milestone
+Deliverables, related Technical Documentation for that milestone, and any credentials, files, or access
+materials reasonably necessary for Client to review the delivered work.
+7.4 Project Touchpoints. Until final acceptance of the Deliverables, the Parties shall conduct three (3)
+touchpoints per week of approximately fifteen (15) minutes each (by video call or phone) for status updates,
+scope clarifications, and obstacle removal, at times reasonably agreed by the Parties.
+8. Acceptance
+8.1 Within five (5) business days after delivery of a milestone or final Deliverable, Client shall either:
+(a) provide written Acceptance; or
+(b) provide a written list of material non-conformities against the applicable scope or acceptance criteria.
+8.2 If Client identifies material non-conformities, Developer shall correct such non-conformities within a
+reasonable period and resubmit the applicable Deliverable for further review. This cycle shall repeat until the
+in-scope Deliverable conforms to the Agreement.
+8.3 Acceptance shall not be deemed to waive latent defects, security defects, documentation deficiencies,
+ownership issues, or Developer’s warranty obligations under Section 14.
+9. Client Responsibilities
+9.1 Client shall provide reasonably timely access to designated decision-makers, business inputs, branding
+materials in Client’s possession, and accounts or credentials that Client elects to provide for implementation.
+9.2 Client shall designate Aia Labja, or another written designee, as the primary point of contact for scope,
+acceptance, and project direction.
+9.4 Client shall provide Developer with access to Client-controlled systems, environments, and accounts
+reasonably necessary for Developer to perform the Services. Developer shall perform all development and
+configuration work within Client’s environment(s) to the extent practicable, and shall not deploy Client
+workloads into Developer-controlled subscriptions, tenants, or environments except with Client’s prior
+written consent.
+9.3 Client is responsible for legal review of any production legal forms, regulatory disclosures, or
+compliance language used in the product unless Exhibit A expressly states otherwise.
+Think Funding LLC Phase 1A MVP – Page 3
+
+=== PAGE 4 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+10. Documentation and SharePoint Delivery Requirements
+10.1 Developer shall prepare and maintain detailed Technical Documentation for the Phase 1A MVP.
+10.1A System of Record. For avoidance of doubt, Azure SQL Database shall serve as the authoritative
+system of record for all structured business, operational, financial, and compliance data for the Phase 1A
+MVP, and no workflow, task, or document management tool (including Microsoft Lists, SharePoint, or n8n)
+shall be treated as a system of record.
+10.2 The Technical Documentation shall be organized and saved in Client’s designated SharePoint location
+and shall be delivered in a form reasonably suitable for future troubleshooting, maintenance, handoff, and
+operational understanding.
+10.3 At a minimum, the Technical Documentation shall include:
+(a) solution overview;
+(b) system architecture summary;
+(c) codebase/module overview;
+(d) database/schema notes;
+(e) workflow and automation explanations;
+(f) environment/configuration notes, excluding secrets;
+(g) deployment steps;
+(h) dependency list;
+(i) troubleshooting/runbook notes; and
+(j) known limitations or deferred items.
+10.4 Technical Documentation is a material Deliverable. Client may reject a milestone if the corresponding
+Technical Documentation is incomplete, materially unclear, or not delivered to the designated SharePoint
+location.
+11. Ownership; Work Made for Hire; Assignment
+11.1 As between the Parties, all Deliverables shall be specially ordered by Client and, to the fullest extent
+permitted by law, shall constitute works made for hire for the benefit of Think Funding.
+11.2 To the extent any Deliverable does not qualify as a work made for hire, Developer hereby irrevocably
+assigns, transfers, and conveys to Think Funding, without further consideration, all right, title, and interest in
+and to such Deliverable, including all intellectual property rights, copyrights, patent rights, trade secret
+rights, and all derivative works therein, worldwide, in perpetuity.
+11.3 The ownership transfer in this Section includes all code, whether source code, object code, compiled
+code, uncompiled code, scripts, templates, automations, workflows, database objects, UI assets,
+documentation, drafts, intermediate work product, and all other work created or configured under this
+Agreement.
+11.4 Developer shall promptly execute further documents and provide further assistance reasonably
+requested by Client to evidence, perfect, or enforce Client’s ownership rights under this Section.
+11.5 Except for pre-existing Developer materials expressly identified in writing before use, Developer shall
+not retain any ownership interest in the Deliverables. Any approved pre-existing Developer materials
+incorporated into the Deliverables shall be licensed to Client on a perpetual, irrevocable, worldwide,
+transferable, sublicensable, fully paid-up basis to the extent necessary for Client to use, modify, support, and
+exploit the Deliverables.
+12. Open Source and Third-Party Materials
+12.1 Developer shall not include any open-source, third-party, or other external code, libraries, templates,
+connectors, or components in a manner that materially restricts Client’s ownership or use of the Deliverables
+without Client’s prior written consent.
+Think Funding LLC Phase 1A MVP – Page 4
+
+=== PAGE 5 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+12.2 Developer shall identify in the Technical Documentation all approved third-party components used in
+the Deliverables and all material license obligations associated with them.
+12.3 Developer shall not include any code or component subject to a copyleft or similar license that would
+require disclosure, licensing, or open-sourcing of Client-owned code unless Client expressly approves such
+use in writing.
+13. Confidentiality and Data Security
+13.1 "Confidential Information" means all non-public information disclosed by or on behalf of Client,
+including business plans, product plans, data models, workflows, specifications, documents, credentials,
+customer information, financial information, and all Deliverables.
+13.2 Developer shall:
+(a) use Confidential Information solely to perform the Services;
+(b) protect Confidential Information using at least reasonable care;
+(c) not disclose Confidential Information except to approved persons with a need to know; and
+(d) promptly notify Client of any actual or suspected unauthorized access, disclosure, loss, or security
+issue affecting Client information or the Deliverables.
+13.3 Developer shall not store, reuse, publish, sell, disclose, or repurpose Client data, Client materials, or
+Deliverables for any other client or purpose.
+13.4 Upon termination or Client’s written request, Developer shall promptly return or securely destroy Client
+Confidential Information in Developer’s possession, except to the extent retention is required by applicable
+law.
+14. Representations, Warranties, and Covenants
+14.1 Each Party represents that it has the authority to enter into and perform this Agreement.
+14.2 Developer represents, warrants, and covenants that:
+(a) the Services will be performed in a professional and workmanlike manner;
+(b) the Deliverables will materially conform to the requirements of this Agreement and Exhibit A;
+(c) Developer has full right to grant the rights granted herein;
+(d) the Deliverables will not knowingly infringe, misappropriate, or violate any third-party intellectual
+property right;
+(e) Developer will not knowingly include malicious code, hidden access methods, or undisclosed
+disabling devices in the Deliverables; and
+(f) Developer will comply with applicable laws in performing the Services.
+14.3 Post-Acceptance Support. Developer shall, at no additional charge, provide support for ninety (90) days
+after final Acceptance to address defects, errors, or non-conformities reported by Client that relate to the in-
+scope Deliverables as delivered. Such support includes reasonable bug fixes and corrections, but excludes
+new features, enhancements, scope expansions, or changes arising from Client-directed modifications not
+made by Developer, third-party outages, or changes to third-party services. This support obligation is in
+addition to, and not in limitation of, Client’s other rights under this Agreement.
+15. Subcontracting; Personnel
+15.1 Developer shall not subcontract, delegate, or assign performance of the Services, in whole or in part,
+without Client’s prior written consent.
+15.2 Developer shall remain fully responsible for all approved subcontractors and for all acts and omissions
+of such persons.
+15.3 The Services are being engaged in reliance on Developer’s personal skill and involvement.
+Think Funding LLC Phase 1A MVP – Page 5
+
+=== PAGE 6 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+15.4 Non-Solicitation. During the term of this Agreement and for twelve (12) months thereafter, Developer
+shall not solicit for employment any employee or contractor of Client who is materially involved in the Phase
+1A MVP, without Client’s prior written consent.
+16. Independent Contractor
+16.1 Developer is an independent contractor and not an employee, partner, joint venturer, or agent of Client.
+16.2 Developer is solely responsible for all taxes, filings, permits, registrations, employment obligations, and
+other obligations arising from Developer’s compensation or performance under this Agreement.
+17. Termination
+17.1 Either Party may terminate this Agreement for material breach by the other Party if such breach is not
+cured within ten (10) business days after written notice describing the breach in reasonable detail.
+17.2 Client may terminate this Agreement for convenience upon written notice. In such event, Client shall
+pay Developer only for properly completed and Accepted milestones completed before the effective date of
+termination. No partial milestone payment shall be due unless Client agrees otherwise in writing.
+17.3 Upon termination, Developer shall promptly deliver to Client all then-existing Deliverables, work in
+progress, Technical Documentation, credentials in Developer’s control that belong to Client, and any other
+Client materials or information reasonably necessary for transition. Developer shall immediately cease use of
+and access to Client systems except to the extent Client expressly authorizes limited continued access in
+writing for transition support or the post-acceptance support period under Section 14.3. Client may disable or
+terminate Developer’s access at any time in its discretion, and in any event shall disable Developer’s access
+no later than three (3) months after final Acceptance or termination of this Agreement (whichever occurs
+first); provided that Client may later re-enable access for a future phase or new engagement by written
+authorization.
+Upon Client’s request (including upon termination or at the end of the period described above), Developer
+shall certify in writing that Developer has not retained any Client data, credentials, or environment artifacts
+outside Client-controlled environments, except to the extent retention is required by applicable law.
+17.4 Survival. Sections 5 (Fees and Payment), 10 (Documentation and SharePoint Delivery Requirements),
+11 (Ownership; Work Made for Hire; Assignment), 12 (Open Source and Third-Party Materials), 13
+(Confidentiality and Data Security), 17 (Termination), 18 (Indemnification), 19 (Limitation of Liability), 20
+(Governing Law; Dispute Resolution), 21 (Notices), 22 (General Provisions), and any other provision that by
+its nature should survive, shall survive termination or expiration of this Agreement.
+18. Indemnification
+18.1 Developer shall defend, indemnify, and hold harmless Think Funding and its officers, managers,
+members, and representatives from and against third-party claims, damages, liabilities, costs, and reasonable
+attorneys’ fees arising out of:
+(a) Developer’s breach of this Agreement;
+(b) Developer’s gross negligence, fraud, or willful misconduct; or
+(c) a claim that any Deliverable infringes or misappropriates a third-party intellectual property right,
+except to the extent caused by Client-directed modifications not made by Developer or materials
+furnished solely by Client.
+18.2 Client shall promptly notify Developer of any indemnified claim and reasonably cooperate in the
+defense thereof at Developer’s expense.
+19. Limitation of Liability
+19.1 Except for breaches of confidentiality, ownership/assignment obligations, indemnification obligations,
+fraud, willful misconduct, gross negligence, or unpaid fees, neither Party shall be liable to the other for any
+indirect, incidental, special, consequential, exemplary, or punitive damages arising out of this Agreement.
+Think Funding LLC Phase 1A MVP – Page 6
+
+=== PAGE 7 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+19.2 Except for the excluded categories in Section 19.1, each Party’s aggregate liability under this
+Agreement shall not exceed the Contract Price actually paid or payable under this Agreement.
+20. Governing Law; Dispute Resolution
+20.1 This Agreement shall be governed by and construed in accordance with the laws of the State of Rhode
+Island, without regard to conflict-of-laws rules.
+20.2 The Parties shall first attempt in good faith to resolve any dispute through informal business
+discussions. If the dispute is not resolved, either Party may pursue relief in the state or federal courts located
+in Rhode Island, and each Party consents to the exclusive jurisdiction and venue of such courts.
+20.3 Notwithstanding the foregoing, Client may seek temporary, preliminary, or permanent injunctive relief
+in any court of competent jurisdiction to protect Confidential Information, intellectual property, or ownership
+rights.
+21. Notices
+21.1 All notices under this Agreement shall be in writing and delivered by email or other written method that
+provides a record of delivery to the contact information stated above, or to any updated contact information
+later designated in writing.
+21.2 Notices to Think Funding shall be directed to Aia Labja at aia.labja@thinkfundinggroup.com unless
+Client designates another notice address in writing.
+21.3 Notices to Developer shall be directed to vjrodriguez1994@gmail.com unless Developer designates
+another notice address in writing.
+22. General Provisions
+22.1 Entire Agreement. This Agreement, together with its Exhibits, constitutes the entire agreement between
+the Parties with respect to its subject matter and supersedes all prior or contemporaneous discussions,
+proposals, or understandings relating to that subject matter.
+22.1A No Legal/Compliance Advice. Developer does not provide legal, regulatory, compliance,
+underwriting, or risk-management advice, and Client retains sole responsibility for legal, regulatory, and
+compliance determinations related to Client’s business operations and use of the Deliverables.
+22.2 Amendment. This Agreement may be amended only by a written instrument signed by both Parties.
+22.3 Waiver. No waiver is effective unless in writing, and no waiver shall operate as a continuing waiver.
+22.4 Severability. If any provision is held unenforceable, the remaining provisions shall remain in full force
+and effect, and the unenforceable provision shall be enforced to the maximum extent permitted by law.
+22.5 Assignment. Developer may not assign this Agreement without Client’s prior written consent. Client
+may assign this Agreement to an affiliate or successor in connection with a merger, reorganization, sale, or
+transfer of substantially all of its business or assets.
+22.6 Counterparts; Electronic Signatures. This Agreement may be executed in counterparts and by electronic
+signature, each of which shall be deemed an original and all of which together shall constitute one
+instrument.
+22.7 Interpretation. Headings are for convenience only and do not affect interpretation. The words "include,"
+"includes," and "including" mean "including without limitation."
+Think Funding LLC Phase 1A MVP – Page 7
+
+=== PAGE 8 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+IN WITNESS WHEREOF, the Parties have executed this Agreement as of the Effective Date.
+THINK FUNDING LLC DEVELOPER
+By: ______________________________
+By: ______________________________
+Name: Aia Labja
+Name: Vincent John Rodriguez
+Title: Authorized Representative
+Date: ____________________________
+Date: ____________________________
+Email: aia.labja@thinkfundinggroup.com Email: vjrodriguez1994@gmail.com
+Location: Rhode Island, USA Location: Philippines
+Think Funding LLC Phase 1A MVP – Page 8
+
+=== PAGE 9 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+EXHIBIT A
+STATEMENT OF WORK – PHASE 1A MVP
+A.1 Project Objective
+Developer shall deliver a lean, launch-oriented Phase 1A MVP for Think Funding LLC. The objective is to
+provide a functional foundation that supports early merchant intake and internal operations without
+expanding into later-phase features.
+A.2 In-Scope Deliverables (Phase 1A Only)
+The in-scope Deliverables for Phase 1A MVP are limited to the following high-level items:
+(a) a professional public-facing website presence for Think Funding at or for use with
+www.thinkfundinggroup.com, including a dark mode option with the default appearance set to light
+mode;
+(b) a secure merchant application intake flow sufficient for initial MVP use;
+(c) secure document upload capability for merchant-submitted materials;
+(d) a basic internal operations/admin interface sufficient to review submissions and core records at an
+MVP level;
+(e) core Azure-hosted application setup for the MVP environment;
+(f) core database setup using Azure SQL for foundational MVP entities and records;
+(g) document storage setup using Azure Blob Storage or equivalent Azure storage selected for the MVP
+architecture;
+(h) Microsoft Entra-based authentication or access controls as applicable to the MVP scope;
+(i) baseline n8n workflow/orchestration setup for submission intake, file organization, and basic
+notifications/alerts;
+(j) basic Microsoft 365 notification integration (such as Outlook and/or Teams notifications) where
+required by the MVP scope;
+(k) structured handoff of code, configurations, workflows, and Technical Documentation; and
+(l) deployment and handoff sufficient for Client to possess and understand the delivered MVP
+foundation.
+A.3 Technical Documentation Deliverables
+Developer shall prepare and save to Client’s designated SharePoint location detailed Technical
+Documentation for all in-scope MVP work. Such documentation shall include, at minimum, the following, to
+the extent applicable to the delivered solution:
+(a) solution overview and architecture summary;
+(b) repository/codebase structure summary;
+(c) environment/configuration documentation, excluding secret values;
+(d) Azure services used and their role in the MVP;
+(e) Azure SQL schema/object overview for the MVP;
+(f) n8n workflow descriptions, trigger logic, and operational purpose;
+(g) deployment notes and update steps;
+(h) dependency list and third-party component summary;
+(i) troubleshooting/runbook notes; and
+(j) known limitations, deferred items, and assumptions.
+A.4 Deliverable Standards
+All Deliverables shall be delivered in a reasonably organized, readable, and maintainable manner consistent
+with MVP-stage software development. Developer shall provide Client with all source code, compiled code,
+Think Funding LLC Phase 1A MVP – Page 9
+
+=== PAGE 10 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+configuration files, workflow exports, schema scripts or equivalent database setup materials, and
+documentation generated for the project.
+Developer shall not withhold any material element necessary for Client or its future contractors to
+understand, access, troubleshoot, maintain, or continue development of the Phase 1A MVP.
+A.5 Out of Scope for Phase 1A
+The following items are expressly out of scope for Phase 1A unless added by signed Change Order:
+(a) advanced AI, OCR, bank statement extraction, automated risk scoring, underwriting intelligence, or
+automated fraud analysis;
+(b) broker/ISO portal functionality;
+(c) full underwriting workbench, servicing module, collections module, payment processing engine,
+ACH handling, reconciliation, renewal workflows, or portfolio analytics;
+(d) advanced dashboards, BI reporting, KPI packs, or Power BI production reporting;
+(e) full lifecycle automation beyond baseline MVP notifications and basic workflow routing;
+(f) accounting integrations, advanced compliance engines, OFAC automation, or production-grade
+legal/compliance content authoring;
+(g) custom mobile applications;
+(h) penetration testing, formal security certification, or enterprise-grade disaster recovery beyond normal
+MVP setup; and
+(i) any feature, module, workflow, integration, or page not expressly stated as in scope in this Exhibit A.
+A.6 Future-Phase Reference Only
+The Parties acknowledge that later phases may include higher-level functionality such as: Phase 1B practical
+upgrades and automation; Phase 2 automation, rules, and reporting expansion; and Phase 3 full lifecycle
+functionality including broker portal, servicing, collections, ACH exception handling, renewals,
+reconciliation, analytics, and broader operational tooling. These later-phase items are not included in the
+Contract Price and are referenced only to clarify exclusions.
+A.7 Acceptance Criteria
+Unless the Parties specify more detailed criteria in Exhibit B, the general acceptance criteria for Phase 1A
+MVP Deliverables are:
+(a) the delivered items materially conform to the in-scope requirements of this Exhibit A;
+(b) the core workflows intended for MVP use are materially functional;
+(c) the required handoff materials have been delivered; and
+(d) the corresponding Technical Documentation has been uploaded to the designated SharePoint
+location.
+Think Funding LLC Phase 1A MVP – Page 10
+
+=== PAGE 11 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+EXHIBIT B
+MILESTONES AND PAYMENT SCHEDULE
+The milestone details and milestone target dates below intentionally include blank lines so the Parties may
+complete them before signature. Payment is due only after completion and Acceptance of the applicable
+milestone.
+Target Completion Payment Payment
+No. Milestone Description
+Date % Amount
+PHP 36,114.00
+1 Foundation & Environment Setup May 2, 2026 20%
+Core Platform Build & Workflow PHP 54,171.00
+2 May 17, 2026 30%
+Integration
+Testing, Launch Readiness & Phase 1A PHP 90,285.00
+3 June 1, 2026 50%
+Completion
+Conversion Rate and PHP amounts: 1 USD = 60.19 PHP (Wise.com on April 13, 2026 at 11:00 AM EST).
+Total Contract Price in PHP: PHP 180,570.00. Milestone 1 (20%): PHP 36,114.00. Milestone 2 (30%): PHP
+54,171.00. Milestone 3 (50%): PHP 90,285.00. The Conversion Rate is fixed for all Milestone Payments.
+Milestone acceptance date for Milestone 1: ______________________________
+Milestone acceptance date for Milestone 2: ______________________________
+Milestone acceptance date for Milestone 3: ______________________________
+Any milestone-specific acceptance criteria, assumptions, or notes:
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+Think Funding LLC Phase 1A MVP – Page 11
+
+=== PAGE 12 ===
+
+SOFTWARE DEVELOPMENT AGREEMENT AND STATEMENT OF WORK
+EXHIBIT C
+OUT-OF-SCOPE ITEMS AND FUTURE PHASES (REFERENCE ONLY)
+This Exhibit is included solely to reduce ambiguity and prevent scope creep. The following items are not
+included in the Contract Price for this Agreement and are not required for Phase 1A MVP delivery unless
+later added through a signed Change Order or separate agreement:
+Phase High-Level Reference Only
+Practical upgrade layer, including more automation, bank statement extraction
+Phase 1B support, underwriting report generation, missing-document chase automation, and
+stronger compliance checklisting.
+Automation and intelligence expansion, including deeper rules, fraud/risk models,
+Phase 2
+reporting improvements, and enhanced internal workbench functionality.
+Full lifecycle scale, including broker/ISO portal, servicing, collections, ACH
+Phase 3 exception handling, reconciliation, renewals, analytics, accounting support, and
+broader operational tooling.
+No feature, module, integration, automation, report, workflow, support obligation, or enhancement
+associated with any future phase shall be implied to be included in Phase 1A solely because it is mentioned
+in this Agreement.
+Think Funding LLC Phase 1A MVP – Page 12

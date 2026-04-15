@@ -1,0 +1,249 @@
+# Think Funding LLC - Phase 1A MVP
+## Project Initialization
+
+**Version:** 1.0
+**Date:** April 15, 2026
+**Contract:** Vincent John Rodriguez - Phase1A-MSA-SOW
+**Client:** Think Funding LLC (Aia Labja)
+
+---
+
+## PROJECT OVERVIEW
+
+Phase 1A MVP for Think Funding LLC - a Merchant Cash Advance (MCA) company requiring:
+- Public-facing website with dark/light mode
+- Merchant application portal (intake flow, document upload)
+- Internal operations/admin interface
+- Azure-hosted infrastructure with Entra authentication
+- n8n workflow automation
+
+**Payment:** $3,000 USD (PHP 180,570.00)
+**Milestones:** M1=May 2, M2=May 17, M3=June 1
+
+---
+
+## TECH STACK
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | React 18 SPA |
+| Backend | ASP.NET Core 8 Web API |
+| Database | Azure SQL Database |
+| Document Storage | Azure Blob Storage |
+| Auth (Internal) | Microsoft Entra ID |
+| Auth (Merchants) | ASP.NET Core Identity |
+| Workflow | n8n (Azure-hosted) |
+| Tasks | Microsoft Lists |
+| Notifications | Power Automate + n8n |
+| Hosting | Azure App Service |
+
+---
+
+## QUICK START
+
+### 1. Azure Environment Setup (M1)
+```bash
+# Create resource group
+az group create --name thinkfunding-rg --location eastus
+
+# Create App Service Plan
+az appservice plan create --name tf-api-plan --resource-group thinkfunding-rg --sku B1
+
+# Create Web App (API)
+az webapp create --name thinkfunding-api --resource-group thinkfunding-rg --plan tf-api-plan --runtime "DOTNET|8.0"
+
+# Create SQL Database
+az sql server create --name thinkfunding-sql --resource-group thinkfunding-rg --admin-user sqladmin --admin-password <secure>
+
+# Create Blob Storage
+az storage account create --name thinkfundingstore --resource-group thinkfunding-rg --sku Standard_LRS
+```
+
+### 2. Clone & Setup
+```bash
+git clone <repo-url>
+cd ThinkFunding
+
+# Backend
+cd src/api
+dotnet restore
+dotnet build
+
+# Frontend
+cd ../web
+npm install
+npm start
+```
+
+### 3. Environment Variables
+```bash
+# API (.env)
+AZURE_SQL_CONNECTION_STRING=
+AZURE_BLOB_CONNECTION_STRING=
+ENTRA_CLIENT_ID=
+ENTRA_CLIENT_SECRET=
+ENTRA_TENANT_ID=
+JWT_SECRET=
+
+# Web (.env)
+REACT_APP_API_URL=
+REACT_APP_ENTRA_CLIENT_ID=
+```
+
+---
+
+## MILESTONE DELIVERABLES
+
+### M1: Foundation (Due: May 2)
+- [ ] Azure infrastructure provisioned
+- [ ] Entra app registrations
+- [ ] Database schema (all tables)
+- [ ] API scaffolding with auth
+- [ ] GitHub repo initialized
+- [ ] TechDocs: Architecture, Schema, Config
+
+### M2: Core Platform (Due: May 17)
+- [ ] Public website (dark/light mode)
+- [ ] Merchant portal (login, app wizard, docs)
+- [ ] Internal ops UI (apps, deals, collections)
+- [ ] n8n workflows (5 core workflows)
+- [ ] Teams/Outlook notifications
+- [ ] TechDocs: Workflows, Deployment, Runbook
+
+### M3: Completion (Due: June 1)
+- [ ] E2E testing complete
+- [ ] Production deployment
+- [ ] Client UAT sign-off
+- [ ] All documentation to SharePoint
+- [ ] Handoff package complete
+- [ ] TechDocs: Limitations, Final Runbook
+
+---
+
+## CONTRACT COMPLIANCE
+
+### In Scope (Will Be Paid)
+- Public website with dark/light mode
+- Merchant application intake flow
+- Document upload capability
+- Basic internal operations interface
+- Azure-hosted application
+- Azure SQL + Blob Storage
+- Microsoft Entra authentication
+- Baseline n8n workflows
+- Microsoft 365 notifications
+- Full handoff + Technical Documentation
+
+### Out of Scope (NOT Paid)
+- AI, OCR, bank statement extraction
+- Broker/ISO portal
+- Full underwriting, servicing, collections
+- Advanced dashboards, BI, Power BI
+- Mobile applications
+- Penetration testing
+
+---
+
+## REQUIRED TECHNICAL DOCUMENTATION (Per Contract Section 10.3)
+
+All docs must be saved to SharePoint TechDocs folder.
+
+| # | Document | Milestone |
+|---|---------|-----------|
+| 1 | Solution overview and architecture summary | M1 |
+| 2 | Repository/codebase structure summary | M1 |
+| 3 | Environment/configuration notes (no secrets) | M1 |
+| 4 | Azure services used and their role | M1 |
+| 5 | Azure SQL schema/object overview | M1 |
+| 6 | n8n workflow descriptions, trigger logic, purpose | M2 |
+| 7 | Deployment notes and update steps | M2 |
+| 8 | Dependency list and third-party component summary | M2 |
+| 9 | Troubleshooting/runbook notes | M2/M3 |
+| 10 | Known limitations, deferred items, assumptions | M3 |
+
+---
+
+## PROJECT STRUCTURE
+
+```
+ThinkFunding/
+├── src/
+│   ├── api/                    # ASP.NET Core 8 Web API
+│   │   ├── Controllers/
+│   │   ├── Models/
+│   │   ├── Services/
+│   │   ├── Data/               # EF Core DbContext
+│   │   ├── Auth/               # Entra + Identity
+│   │   └── Program.cs
+│   │
+│   └── web/                    # React 18 SPA
+│       ├── src/
+│       │   ├── components/
+│       │   ├── pages/
+│       │   │   ├── public/     # Website pages
+│       │   │   ├── merchant/   # Portal pages
+│       │   │   └── ops/        # Internal pages
+│       │   ├── api/
+│       │   ├── hooks/
+│       │   ├── context/
+│       │   └── styles/
+│       └── public/
+│
+├── infrastructure/
+│   ├── azure/                  # ARM templates
+│   ├── sql/                    # Schema scripts
+│   └── n8n/                    # Workflow exports
+│
+├── docs/                       # Technical documentation
+│   ├── architecture/
+│   ├── codebase/
+│   ├── configuration/
+│   ├── database/
+│   ├── workflows/
+│   ├── deployment/
+│   ├── dependencies/
+│   ├── runbook/
+│   └── limitations/
+│
+├── tests/
+│   ├── api/
+│   └── web/
+│
+├── AGENTS.md                  # This file
+└── README.md
+```
+
+---
+
+## KEY CONTACTS
+
+| Role | Name | Email |
+|------|------|-------|
+| Client | Aia Labja | aia.labja@thinkfundinggroup.com |
+| Developer | Vincent Rodriguez | vjrodriguez1994@gmail.com |
+
+---
+
+## WEEKLY TOUCHPOINTS
+
+**Schedule:** 3x per week, 15 minutes each, 3:00 PM
+**Platform:** Video call (link to be provided)
+**Purpose:** Status updates, scope clarifications, obstacle removal
+
+---
+
+## CHANGE ORDER PROCESS
+
+Any proposed change to scope, fees, timeline, or deliverables MUST be documented in a Change Order signed by both parties.
+
+Change Order must include:
+1. Description of requested change
+2. Impact on fees
+3. Impact on delivery dates
+4. Revised acceptance criteria
+
+**No work begins until Change Order is signed.**
+
+---
+
+*Last Updated: April 15, 2026*

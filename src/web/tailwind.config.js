@@ -1,0 +1,28 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        navy: {
+          DEFAULT: '#0B2D4E',
+          dark: '#061A2C',
+          light: '#1A4A7A',
+        },
+        teal: {
+          DEFAULT: '#199B93',
+          dark: '#147A74',
+          light: '#E6F5F4',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
