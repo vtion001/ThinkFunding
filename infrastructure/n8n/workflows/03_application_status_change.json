@@ -1,0 +1,120 @@
+{
+  "name": "Think Funding - Application Status Change",
+  "description": "Triggered when application status changes. Routes notification based on status and updates Lists task.",
+  "trigger": {
+    "type": "webhook",
+    "path": "/webhook/application-status-change"
+  },
+  "nodes": [
+    {
+      "name": "Get Status Change Data",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "GET",
+        "url": "={{$env.API_BASE_URL}}/api/applications/{{$json.applicationId}}"
+      },
+      "position": [100, 300]
+    },
+    {
+      "name": "Switch on Status",
+      "type": "n8n-nodes-base.switch",
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{$json.applicationStatus}}",
+        "rules": {
+          "rules": [
+            { "value2": "Approved", "operation": "equals" },
+            { "value2": "Declined", "operation": "equals" },
+            { "value2": "Pending Documents", "operation": "equals" },
+            { "value2": "Under Review", "operation": "equals" }
+          ]
+        }
+      },
+      "position": [300, 300]
+    },
+    {
+      "name": "Send Approval Email",
+      "type": "n8n-nodes-base.emailSend",
+      "parameters": {
+        "to": "{{$json.applicantEmail}}",
+        "subject": "Congratulations! Your Application Has Been Approved",
+        "text": "Your application {{$json.applicationNumber}} has been approved!"
+      },
+      "position": [500, 150]
+    },
+    {
+      "name": "Send Decline Email",
+      "type": "n8n-nodes-base.emailSend",
+      "parameters": {
+        "to": "{{$json.applicantEmail}}",
+        "subject": "Application Update - {{$json.applicationNumber}}",
+        "text": "We regret to inform you that your application has not been approved at this time."
+      },
+      "position": [500, 300]
+    },
+    {
+      "name": "Send Document Request",
+      "type": "n8n-nodes-base.emailSend",
+      "parameters": {
+        "to": "{{$json.applicantEmail}}",
+        "subject": "Additional Information Required - {{$json.applicationNumber}}",
+        "text": "Please upload the following documents to complete your application."
+      },
+      "position": [500, 450]
+    },
+    {
+      "name": "Notify Underwriters",
+      "type": "n8n-nodes-base.microsoftTeams",
+      "parameters": {
+        "operation": "postMessage",
+        "channel": "Underwriting",
+        "message": "Application {{$json.applicationStatus}}\n\n{{$json.merchantName}} - {{$json.applicationNumber}}"
+      },
+      "position": [500, 600]
+    },
+    {
+      "name": "Update Lists Task",
+      "type": "n8n-nodes-base.microsoftSql",
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE [Tasks] SET Status = '{{$json.applicationStatus}}' WHERE RelatedEntityId = {{$json.applicationId}}"
+      },
+      "position": [700, 300]
+    }
+  ],
+  "connections": {
+    "Get Status Change Data": {
+      "main": [
+        [{ "node": "Switch on Status" }]
+      ]
+    },
+    "Switch on Status": {
+      "main": [
+        [{ "node": "Send Approval Email" }],
+        [{ "node": "Send Decline Email" }],
+        [{ "node": "Send Document Request" }],
+        [{ "node": "Notify Underwriters" }]
+      ]
+    },
+    "Send Approval Email": {
+      "main": [
+        [{ "node": "Update Lists Task" }]
+      ]
+    },
+    "Send Decline Email": {
+      "main": [
+        [{ "node": "Update Lists Task" }]
+      ]
+    },
+    "Send Document Request": {
+      "main": [
+        [{ "node": "Update Lists Task" }]
+      ]
+    },
+    "Notify Underwriters": {
+      "main": [
+        [{ "node": "Update Lists Task" }]
+      ]
+    }
+  }
+}

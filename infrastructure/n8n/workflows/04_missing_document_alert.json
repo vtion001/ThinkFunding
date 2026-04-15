@@ -1,0 +1,76 @@
+{
+  "name": "Think Funding - Missing Document Alert",
+  "description": "Daily scheduled workflow to check for incomplete applications and send reminder emails.",
+  "trigger": {
+    "type": "schedule",
+    "cron": "0 9 * * *"
+  },
+  "nodes": [
+    {
+      "name": "Query Incomplete Applications",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "GET",
+        "url": "={{$env.API_BASE_URL}}/api/applications?status=Pending%20Documents"
+      },
+      "position": [100, 300]
+    },
+    {
+      "name": "Split Applications",
+      "type": "n8n-nodes-base.splitInBatches",
+      "parameters": {
+        "batchSize": 1
+      },
+      "position": [300, 300]
+    },
+    {
+      "name": "Get Missing Documents",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "GET",
+        "url": "={{$env.API_BASE_URL}}/api/applications/{{$json.applicationId}}/documents"
+      },
+      "position": [500, 300]
+    },
+    {
+      "name": "Send Reminder Email",
+      "type": "n8n-nodes-base.emailSend",
+      "parameters": {
+        "to": "{{$json.applicantEmail}}",
+        "subject": "Reminder: Documents Required for {{$json.applicationNumber}}",
+        "text": "Please upload the required documents to continue processing your application."
+      },
+      "position": [700, 300]
+    },
+    {
+      "name": "Log Reminder Sent",
+      "type": "n8n-nodes-base.noOp",
+      "parameters": {
+        "description": "Audit log entry created"
+      },
+      "position": [900, 300]
+    }
+  ],
+  "connections": {
+    "Query Incomplete Applications": {
+      "main": [
+        [{ "node": "Split Applications" }]
+      ]
+    },
+    "Split Applications": {
+      "main": [
+        [{ "node": "Get Missing Documents" }]
+      ]
+    },
+    "Get Missing Documents": {
+      "main": [
+        [{ "node": "Send Reminder Email" }]
+      ]
+    },
+    "Send Reminder Email": {
+      "main": [
+        [{ "node": "Log Reminder Sent" }]
+      ]
+    }
+  }
+}

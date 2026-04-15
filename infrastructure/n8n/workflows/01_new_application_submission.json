@@ -1,0 +1,76 @@
+{
+  "name": "Think Funding - New Application Submission",
+  "description": "Triggered when a new application is submitted via API. Creates Microsoft Lists task, sends Teams notification, and email confirmation.",
+  "trigger": {
+    "type": "webhook",
+    "path": "/webhook/application-submitted"
+  },
+  "nodes": [
+    {
+      "name": "Receive Application Data",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.API_BASE_URL}}/api/applications/{{$json.applicationId}}",
+        "options": {}
+      },
+      "position": [100, 300]
+    },
+    {
+      "name": "Create Microsoft Lists Task",
+      "type": "n8n-nodes-base.microsoftSql",
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO [Tasks] (Title, Description, Status, Priority, RelatedEntityId, RelatedEntityType) VALUES ('New Application: {{$json.merchantName}}', 'Amount: {{$json.loanAmountRequested}}', 'Not Started', 'High', {{$json.applicationId}}, 'Application')"
+      },
+      "position": [300, 300]
+    },
+    {
+      "name": "Send Teams Notification",
+      "type": "n8n-nodes-base.microsoftTeams",
+      "parameters": {
+        "operation": "postMessage",
+        "channel": "Underwriting",
+        "message": "New Application Submitted\n\nBusiness: {{$json.merchantName}}\nAmount: ${{$json.loanAmountRequested}}\nApplication #: {{$json.applicationNumber}}\n\n<a href='{{$env.APP_URL}}/ops/applications/{{$json.applicationId}}'>Review Application</a>"
+      },
+      "position": [500, 300]
+    },
+    {
+      "name": "Send Email Confirmation",
+      "type": "n8n-nodes-base.emailSend",
+      "parameters": {
+        "to": "{{$json.applicantEmail}}",
+        "subject": "Application Received - {{$json.applicationNumber}}",
+        "text": "Your application has been received and is under review. We'll be in touch soon!"
+      },
+      "position": [700, 300]
+    },
+    {
+      "name": "Log to Audit Table",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.API_BASE_URL}}/api/health",
+        "options": {}
+      },
+      "position": [500, 500]
+    }
+  ],
+  "connections": {
+    "Receive Application Data": {
+      "main": [
+        [{ "node": "Create Microsoft Lists Task" }]
+      ]
+    },
+    "Create Microsoft Lists Task": {
+      "main": [
+        [{ "node": "Send Teams Notification" }]
+      ]
+    },
+    "Send Teams Notification": {
+      "main": [
+        [{ "node": "Send Email Confirmation" }]
+      ]
+    }
+  }
+}

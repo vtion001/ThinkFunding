@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ThinkFunding.Api.Data;
+using ThinkFunding.Api.Middleware;
 using ThinkFunding.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -75,6 +76,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseExceptionHandling();
 app.UseHttpsRedirection();
 app.UseCors("AllowFrontend");
 app.UseAuthentication();

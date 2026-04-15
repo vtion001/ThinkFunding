@@ -1,0 +1,59 @@
+{
+  "name": "Think Funding - Daily Underwriting Reminder",
+  "description": "Morning summary of pending applications sent to underwriting channel.",
+  "trigger": {
+    "type": "schedule",
+    "cron": "0 9 * * 1-5"
+  },
+  "nodes": [
+    {
+      "name": "Query Pending Applications",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "GET",
+        "url": "={{$env.API_BASE_URL}}/api/applications?status=Submitted"
+      },
+      "position": [100, 300]
+    },
+    {
+      "name": "Query Under Review",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "GET",
+        "url": "={{$env.API_BASE_URL}}/api/applications?status=Under%20Review"
+      },
+      "position": [100, 500]
+    },
+    {
+      "name": "Format Summary Message",
+      "type": "n8n-nodes-base.code",
+      "parameters": {
+        "jsCode": "const submitted = $json('submittedApplications') || [];\nconst underReview = $json('underReviewApplications') || [];\n\nconst formatApp = (app) => `• ${app.merchantName} - $${app.loanAmountRequested} (${app.applicationNumber})`;\n\nconst message = `Daily Underwriting Summary\n\nSubmitted (${submitted.length}):\n${submitted.slice(0, 10).map(formatApp).join('\\n')}${submitted.length > 10 ? '\\n...and ' + (submitted.length - 10) + ' more' : ''}\n\nUnder Review (${underReview.length}):\n${underReview.slice(0, 5).map(formatApp).join('\\n')}${underReview.length > 5 ? '\\n...and ' + (underReview.length - 5) + ' more' : ''}`;\n\nreturn { message };",
+        "outputsToKeep": ["main"]
+      },
+      "position": [300, 400]
+    },
+    {
+      "name": "Send Teams Summary",
+      "type": "n8n-nodes-base.microsoftTeams",
+      "parameters": {
+        "operation": "postMessage",
+        "channel": "Underwriting",
+        "message": "={{$json.message}}"
+      },
+      "position": [500, 400]
+    }
+  ],
+  "connections": {
+    "Query Pending Applications": {
+      "main": [
+        [{ "node": "Format Summary Message" }]
+      ]
+    },
+    "Query Under Review": {
+      "main": [
+        [{ "node": "Format Summary Message" }]
+      ]
+    }
+  }
+}

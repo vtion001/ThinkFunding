@@ -1,0 +1,68 @@
+{
+  "name": "Think Funding - Document Uploaded",
+  "description": "Triggered when a document is uploaded to blob storage. Updates document status in SQL and notifies if application is complete.",
+  "trigger": {
+    "type": "azureBlobStorage",
+    "events": ["BlobCreated"]
+  },
+  "nodes": [
+    {
+      "name": "Get Blob Info",
+      "type": "n8n-nodes-base.azureBlobStorage",
+      "parameters": {
+        "operation": "getBlob",
+        "blobName": "={{$json.blobName}}",
+        "containerName": "documents"
+      },
+      "position": [100, 300]
+    },
+    {
+      "name": "Update Document Status",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "PUT",
+        "url": "={{$env.API_BASE_URL}}/api/documents/{{$json.documentId}}",
+        "body": {
+          "reviewStatus": "Uploaded"
+        }
+      },
+      "position": [300, 300]
+    },
+    {
+      "name": "Check Application Completeness",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "GET",
+        "url": "={{$env.API_BASE_URL}}/api/applications/{{$json.applicationId}}/documents"
+      },
+      "position": [500, 300]
+    },
+    {
+      "name": "Notify if Complete",
+      "type": "n8n-nodes-base.microsoftTeams",
+      "parameters": {
+        "operation": "postMessage",
+        "channel": "Underwriting",
+        "message": "Document Uploaded\n\nDocument: {{$json.documentName}}\nType: {{$json.documentType}}\nApplication: {{$json.applicationNumber}}"
+      },
+      "position": [700, 300]
+    }
+  ],
+  "connections": {
+    "Get Blob Info": {
+      "main": [
+        [{ "node": "Update Document Status" }]
+      ]
+    },
+    "Update Document Status": {
+      "main": [
+        [{ "node": "Check Application Completeness" }]
+      ]
+    },
+    "Check Application Completeness": {
+      "main": [
+        [{ "node": "Notify if Complete" }]
+      ]
+    }
+  }
+}
