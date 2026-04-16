@@ -1,14 +1,30 @@
 using Microsoft.EntityFrameworkCore;
+using ThinkFunding.Api.Configuration;
 using ThinkFunding.Api.Data;
 using ThinkFunding.Api.Middleware;
 using ThinkFunding.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var isDevelopment = builder.Environment.IsDevelopment();
+
+if (!isDevelopment)
+{
+    ConfigurationValidator.Validate(builder.Configuration);
+}
+
 // Add services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "Think Funding API",
+        Version = "v1",
+        Description = "API for Think Funding LLC Merchant Cash Advance Platform"
+    });
+});
 
 // Add CORS
 builder.Services.AddCors(options =>
